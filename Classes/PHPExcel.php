@@ -363,6 +363,7 @@ class PHPExcel
      */
     public function __construct()
     {
+        ini_set('error_reporting', (string) (E_ALL & ~E_NOTICE));
         $this->uniqueID = uniqid();
         $this->calculationEngine = new PHPExcel_Calculation($this);
 
